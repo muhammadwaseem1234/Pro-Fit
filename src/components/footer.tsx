@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhone, FaEnvelope
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300 pt-12 pb-6"> {/* Changed to black bg */}
+    <footer id="contact-section" className="bg-black text-gray-300 pt-12 pb-6"> {/* Changed to black bg */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
