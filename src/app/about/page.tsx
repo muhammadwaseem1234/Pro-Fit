@@ -195,6 +195,105 @@ export default function About() {
             </p>
           </motion.div>
         </section>
+        {/* Founders Carousel */}
+{/* Founders Carousel */}
+<section className="bg-black py-24 mt-24">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className={`text-4xl font-bold text-white mb-12 ${headingFont.className}`}>
+      Meet Our <span className="font-light">Founders</span>
+    </h2>
+
+    {/* Carousel container */}
+    <div className="relative overflow-hidden cursor-grab">
+      <motion.div
+        className="flex gap-8"
+        drag="x"
+        dragConstraints={{ left: -((320 + 32) * 2), right: 0 }}
+        dragElastic={0.2}
+        whileTap={{ cursor: "grabbing" }}
+      >
+        {/* CARD 1 */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex-shrink-0 w-[320px] h-[480px] bg-white rounded-2xl overflow-hidden shadow-xl"
+        >
+          <div className="w-full h-72 relative">
+            <Image
+              src="/about/waseem.jpg"
+              alt="Founder Muhammad Waseem"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6 h-[calc(480px-18rem)]">
+            <h3 className={`text-2xl font-bold mb-2 text-black ${headingFont.className}`}>
+              Muhammad Waseem
+            </h3>
+            <p className="text-gray-700 text-base leading-relaxed">
+              Muhammad Waseem pairs bold thinking with sharp strategy, thriving under pressure and turning challenges into decisive opportunities.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* CARD 2 */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+          className="flex-shrink-0 w-[320px] h-[480px] bg-white rounded-2xl overflow-hidden shadow-xl"
+        >
+          <div className="w-full h-72 relative">
+            <Image
+              src="/about/anas.jpg"
+              alt="Founder Muhammathu Anas"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6 h-[calc(480px-18rem)]">
+            <h3 className={`text-2xl font-bold mb-2 text-black ${headingFont.className}`}>
+              Muhammathu Anas
+            </h3>
+            <p className="text-gray-700 text-base leading-relaxed">
+              Anas is the quiet force behind the strategy, combining sharp insight with unwavering focus to keep every move precise and impactful.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* CARD 3 */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+          className="flex-shrink-0 w-[320px] h-[480px] bg-white rounded-2xl overflow-hidden shadow-xl"
+        >
+          <div className="w-full h-72 relative">
+            <Image
+              src="/about/aasif.jpg"
+              alt="Founder Muhammath Aasif"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6 h-[calc(480px-18rem)]">
+            <h3 className={`text-2xl font-bold mb-2 text-black ${headingFont.className}`}>
+              Muhammath Aasif
+            </h3>
+            <p className="text-gray-700 text-base leading-relaxed">
+              Aasif is the face of the operation—steady to start, but relentless once in motion, leading with presence and drive.
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
       </div>
     </div>
   );
