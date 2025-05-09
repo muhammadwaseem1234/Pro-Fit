@@ -2,6 +2,34 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Dumbbell, Users, Utensils, ChevronRight, ArrowRight } from "lucide-react";
 
+// At the top of the file (below your imports):
+const testimonials = [
+  {
+    name: "Muhammad Ali",
+    since: "Member since 2025",
+    rating: 5,
+    text: "PRO FITNESS transformed my life—down 20kg and up 30% in strength in just 3 months!",
+    avatarColor: "bg-white",
+  },
+  {
+    name: "Sara Khan",
+    since: "Member since 2025",
+    rating: 4,
+    text: "The group classes are life-changing. I feel stronger, fitter, and part of an amazing community.",
+    avatarColor: "bg-white",
+  },
+  {
+    name: "Ravinder",
+    since: "Member since 2025",
+    rating: 5,
+    text: "From nutrition to training, PRO FITNESS delivers. My energy levels have never been higher!",
+    avatarColor: "bg-white",
+  },
+];
+
+
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -93,31 +121,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-black">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">SUCCESS STORIES</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <Card key={item} className="bg-black border-gray-700">
-                <CardContent className="p-6">
-                  <div className="text-yellow-600 mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4">
-                    "PRO FITNESS transformed my life. I lost 20kg and gained incredible strength in just 3 months!"
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gray-700"></div>
-                    <div>
-                      <p className="font-medium text-white">Muhammad Ali</p>
-                      <p className="text-sm text-gray-400">Member since 2025</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* Testimonials Section */}
+<section className="py-20 bg-black">
+  <div className="container">
+    <h2 className="text-3xl font-bold text-center mb-12 text-white">SUCCESS STORIES</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      {testimonials.map(({ name, since, rating, text, avatarColor }) => (
+        <Card key={name} className="bg-black border-gray-700">
+          <CardContent className="p-6">
+            <div className="text-yellow-600 mb-4">
+              {"★".repeat(rating) + "☆".repeat(5 - rating)}
+            </div>
+            <p className="text-gray-300 mb-4">"{text}"</p>
+            <div className="flex items-center gap-3">
+              <div className={`w-10 h-10 rounded-full ${avatarColor}`}></div>
+              <div>
+                <p className="font-medium text-white">{name}</p>
+                <p className="text-sm text-gray-400">{since}</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-black border-t border-gray-800">
