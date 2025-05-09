@@ -1,7 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { Libre_Baskerville, Montserrat, Inter } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 
 // Font configuration
 const headingFont = Inter({
